@@ -13,7 +13,7 @@ type Config struct {
 
 var pool *_redis.Pool
 
-func Init(conf Config) {
+func Init(conf *Config) {
 	pool = &_redis.Pool{
 		MaxIdle:   conf.MaxIdle,
 		MaxActive: conf.MaxActive,
